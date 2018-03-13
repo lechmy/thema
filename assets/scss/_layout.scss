@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    background-color: $secondary;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.horizontal-stripe{
+    position: fixed;
+    top: 0px;
+    left: 17vw;
+    width: 58px;
+    height: 100vh;
+    background-color: $primary;
+    z-index: $redline-z-index;
+    @media (max-width: 767px){
+        display: none;
+    }
+}
+
+.img-block{
+    width: 100%;
+}
+
+.context{
+    $image-width: 13.6vw;
+
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    margin-left: $left-margin;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    text-align: center;
+
+    @media (max-width: 767px){
+        margin-left: 0;
+    }
+
+    .image-holder{
+        position: relative;
+        width: $image-width;
+        margin: 0px 20px;
+        @media (max-width: 767px){
+            display: none;
+        }
+    }
+    img{
+        width: 100%;
+    }
+    div.text{
+        width: 35vw;
+        margin: 0px 30px;
+        font-size: 1rem;
+        @media (max-width: 767px){
+            width: 100%;
+            margin: 0;
+            padding: 0 15px;
+        }
+        p{
+            margin: 0;
+        }
+        .phone-number{
+            display: none;
+            @media (max-width: 575px){
+                display: inline-block;
+                color: $primary;
+                margin-top: 15px;
+                padding: 2px 12px;
+                border: 1px solid $primary;
+                @include no-effect($primary);
+            }
+        }
+    }
+}
+
+.negative-margin{
+    margin-top: -122px;
+    @media (max-width: 1024px){
+        margin-top: -70px;
+    }
+    @media (max-width: 767px){
+        margin-top: -50px;
+    }
+}
+
+.first-section{
+    height: 382px;
+    color: $white;
+    @media (max-width: 767px){
+        height: auto;
+        padding: 20px 0;
+    }
+    p{
+        font-size: 30px;
+        @media (max-width: 1199px){
+            font-size: 24px;
+        }
+        @media (max-width: 1024px){
+            font-size: 18px;
+        }
+    }
+}
+.second-section{
+    height: 531px;
+    color: $white;
+    @media (max-width: 767px){
+        height: auto;
+        padding: 20px 0;
+    }
+    p{
+        font-size: 27px;
+        @media (max-width: 1199px){
+            font-size: 24px;
+        }
+        @media (max-width: 1024px){
+            font-size: 18px;
+        }
+    }
+}
+.cake-section{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 446px;
+    margin-left: $left-margin;
+    padding: 0px 15px;
+    z-index: $cake-z-index;
+    @media (max-width: 767px){
+        display: none;
+    }
+    .cake-images{
+        margin: 35px 70px;
+        @media (max-width: 1439px){
+            margin: 35px 40px;
+        }
+        @media (max-width: 1199px){
+            width: 100px;
+        }
+        @media (max-width: 991px){
+            margin: 35px 20px;
+        }
+    }
+}
+.map-top-image,
+.map-bottom-image{
+    position: relative;
+    z-index: $map-overlay-z-index;
+    pointer-events: none;
+}
+.map-top-image{
+    @media (max-width: 767px){
+        margin-top: -55px;
+    }
+}
+.map-container{
+    position: relative;
+    height: 665px;
+    width: 100%;
+    @media (max-width: 767px){
+        height: 500px;
+    }
+    .map{
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        height: 1400px;
+        width: 100%;
+        @media (max-width: 991px){
+            height: 1000px;
+        }
+        @media (max-width: 767px){
+            height: 715px;
+            @include transform(translateY(-55%));
+        }
+    }
+}

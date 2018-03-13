@@ -1,0 +1,69 @@
+$scaleUnit: 1.1;
+
+.big-slider{
+    height: 100vh;
+    width: 100vw;
+    .slick-list,
+    .slick-track{
+        height: inherit;
+    }
+    .slide{
+
+        img{
+            display: block;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            // @include transform(translate(-52%, -52%));
+            @include transform(scale($scaleUnit));
+            // min-width: 105%;
+            // min-height: 105%;
+        }
+        &.animate{
+            img{
+                animation: moving-image 20s forwards;        
+            }
+        }
+    }
+}
+
+@keyframes moving-image{
+    0%{
+        // @include transform(translate(-52%, -52%));
+        @include transform(scale($scaleUnit));
+        
+    }
+    100%{
+        // @include transform(translate(-48%, -48%));
+        @include transform(scale(1.0));
+        
+    }
+}
+
+    // .slide{
+    //     height: 100%;
+    //     background-size: 110% 110%;
+    //     background-repeat: no-repeat;
+    //     animation: moving-background 10s forwards linear;
+    //     &:focus{
+    //         outline: none;
+    //     }
+    // }
+    // @for $i from 1 through 6 {
+    //     .slide:nth-child(#{$i}){
+    //         background-image: url('./../images/slider/slika#{$i}.png');
+    //     }
+    // }
+
+@keyframes moving-background{
+    0%{
+        // background-position: 20% 50%;
+        background-position: 0px 0px;
+        // height: 100%;
+    }
+    100%{
+        // background-position: 50% 50%;
+        background-position: 20px 0px;
+        // height: 80%;
+    }
+}

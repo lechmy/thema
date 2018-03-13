@@ -1,0 +1,107 @@
+footer{
+    position: relative;
+    background-color: $secondary;
+    color: $white;
+    @media(max-width: 767px){
+        z-index: $footer-z-index;
+    }
+    %content{
+        margin-left: $left-margin;
+        // margin-right: 220px;
+        padding: 50px 30px 20px 30px;
+        color: $white;
+        @media(max-width: 991px){
+            margin-right: 0px;
+        }
+        @media(max-width: 767px){
+            margin: 0;
+            padding: 30px;
+        }
+    }
+    .footer-content{
+        @extend %content;
+        @include clearfix;
+        
+        img{
+            margin-right: 220px;
+            @media (max-width: 1199px){
+                margin-right: 0;
+            }
+        }
+        .social-icons{
+            display: none;
+            text-align: center;
+            margin-bottom: 10px;
+            @media (max-width: 575px){
+                display: block;
+                margin-bottom: 20px;
+                a{
+                    display: inline-block;
+                    margin: 0 15px;
+                }
+            }
+        }
+        .phone-number{
+            display: block;
+            margin-top: 0;
+            font-size: 16px;
+            text-align: right;
+            color: $white;
+            @include no-effect($white);
+            @media (max-width: 575px){
+                display: inline-block;
+                margin: 15px 0;
+                padding: 2px 12px;
+                border: 1px solid $primary;
+                color: $primary;
+                font-size: 20px;
+                text-align: center;
+                line-height: 27px;
+                @include no-effect($primary);
+                
+            }
+        }
+        .info{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            @media (max-width: 575px) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            p{
+                margin: 0;
+                text-align: right;
+                line-height: 52px;
+                @media (max-width: 575px){
+                    text-align: center;
+                }
+                .phone-number{
+                    line-height: normal;
+                }
+            }
+        }
+        hr{
+            border-color: $white;
+            margin: 10px 0;
+            @media (max-width: 575px) {
+                width: 170px;
+                margin: 10px auto;
+                display: none;
+            }
+        }
+        .copyright{
+            float: left;
+            @media (max-width: 575px){
+                width: 100%;
+                float: none;
+                font-size: 8px;
+                margin-top: 20px;
+                text-align: center;
+                line-height: normal;
+            }
+        }
+    }
+    
+}
