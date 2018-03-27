@@ -14,14 +14,14 @@ $disabled: lighten($primary, 30%);
 $disabled-gray: lighten($gray, 30%);
 
 $z-index: 100;
-$nav-z-index: $z-index + 1;
+$nav-z-index: $z-index + 5;
 $map-overlay-z-index: $z-index + 2;
 $cake-z-index: $z-index + 3;
 $first-image-z-index: $z-index + 3;
 $footer-z-index: $z-index + 3;
 $redline-z-index: $z-index + 4;
 
-$redline-width: 58px;
-$left-margin: calc(17vw + #{$redline-width});
+$redline-unit: 58px;
+$left-margin: calc(17vw + #{$redline-unit});
 
 $time: 0.3s;

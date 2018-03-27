@@ -3,6 +3,10 @@
 body{
     background-color: $secondary;
     font-family: 'Montserrat', sans-serif;
+    margin-top: $redline-unit;
+    @media (max-width: 767px){
+        margin-top: 0;
+    }
 }
 
 .horizontal-stripe{
@@ -27,6 +31,7 @@ body{
 
     display: -webkit-flex;
     display: flex;
+    overflow: hidden;
     height: 100%;
     margin-left: $left-margin;
     -webkit-justify-content: center;
@@ -93,8 +98,12 @@ body{
         height: auto;
         padding: 20px 0;
     }
+    img{
+        @include image-animation(50%);
+    }
     p{
         font-size: 30px;
+        @include text-animation;        
         @media (max-width: 1199px){
             font-size: 24px;
         }
@@ -110,8 +119,12 @@ body{
         height: auto;
         padding: 20px 0;
     }
+    img{
+        @include image-animation(-50%);
+    }
     p{
         font-size: 27px;
+        @include text-animation;
         @media (max-width: 1199px){
             font-size: 24px;
         }
@@ -138,6 +151,7 @@ body{
     }
     .cake-images{
         margin: 35px 70px;
+        @include image-animation(50%);
         @media (max-width: 1439px){
             margin: 35px 40px;
         }

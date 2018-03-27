@@ -1,10 +1,12 @@
 header{
-    position: relative;
+    position: fixed;
     display: block;
+    top: 0;
     width: 100%;
-    height: 58px;
+    height: $redline-unit;
     padding: 16px 0px;
     background-color: $primary;
+    z-index: $nav-z-index;
     @media (max-width: 767px){
         display: none;
     }

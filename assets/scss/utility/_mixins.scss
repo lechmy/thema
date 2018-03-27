@@ -56,3 +56,23 @@
     }
 }
 
+@mixin image-animation($direction){
+    $time: 1s;
+    @include transform(translateX($direction));
+    opacity: 0;
+    @include transition((transform $time, opacity $time));
+    &.active{
+        @include transform(translateX(0%));
+        opacity: 1;
+    }
+}
+
+@mixin text-animation{
+    $time: 1.5s;
+    opacity: 0;
+    @include transition((opacity $time));
+    &.active{
+        opacity: 1;
+    }
+}
+

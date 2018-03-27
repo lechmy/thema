@@ -2,6 +2,16 @@ $(document).ready(function(){
   var source = window.innerWidth > 575 ? 'src' : 'src-xs' ;
   $('.js-lazy-img').each(function(index, item){
     $(item).prop('src', $(item).data(source));
+  });
+});
+
+var animationItems = $('[data-animation]');
+$(document).on('scroll', function(){
+  var position = window.pageYOffset + (window.innerHeight / 2);
+  animationItems.each(function(index, item){
+    if(position >= $(item).offset().top){
+      $(item).find('img, p').addClass('active');
+    }
   })
 })
 
