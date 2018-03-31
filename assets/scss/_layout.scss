@@ -4,6 +4,7 @@ body{
     background-color: $secondary;
     font-family: 'Montserrat', sans-serif;
     margin-top: $redline-unit;
+    overflow-x: hidden;
     @media (max-width: 767px){
         margin-top: 0;
     }
@@ -31,7 +32,6 @@ body{
 
     display: -webkit-flex;
     display: flex;
-    overflow: hidden;
     height: 100%;
     margin-left: $left-margin;
     -webkit-justify-content: center;

@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 var animationItems = $('[data-animation]');
 $(document).on('scroll', function(){
-  var position = window.pageYOffset + (window.innerHeight / 2);
+  var position = window.pageYOffset + (window.innerHeight / 1.5);
   animationItems.each(function(index, item){
     if(position >= $(item).offset().top){
       $(item).find('img, p').addClass('active');

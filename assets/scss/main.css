@@ -6574,7 +6574,8 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   background-color: #303538;
   font-family: 'Montserrat', sans-serif;
-  margin-top: 58px; }
+  margin-top: 58px;
+  overflow-x: hidden; }
   @media (max-width: 767px) {
     body {
       margin-top: 0; } }
@@ -6597,7 +6598,6 @@ body {
 .context {
   display: -webkit-flex;
   display: flex;
-  overflow: hidden;
   height: 100%;
   margin-left: calc(17vw + 58px);
   -webkit-justify-content: center;
