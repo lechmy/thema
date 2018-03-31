@@ -6684,6 +6684,9 @@ body {
     @media (max-width: 1024px) {
       .first-section p {
         font-size: 18px; } }
+    @media (max-width: 767px) {
+      .first-section p {
+        opacity: 1; } }
 
 .second-section {
   height: 531px;
@@ -6717,6 +6720,9 @@ body {
     @media (max-width: 1024px) {
       .second-section p {
         font-size: 18px; } }
+    @media (max-width: 767px) {
+      .second-section p {
+        opacity: 1; } }
 
 .cake-section {
   display: -webkit-flex;
